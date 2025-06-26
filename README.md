@@ -136,21 +136,35 @@ Built entirely with Streamlit, the UI allows users to:
 ## File Structure
 
 ```
+
+CONVERSATIONAL_RAG_CHATBOT
 ├── .github/                 # GitHub workflows and issue templates
+├── assets/                  # Static images for README
+│   ├── interface.png        # Screenshot of Streamlit UI
+│   └── workflow_and_architecture.png  # Project workflow diagram
 ├── ml_project.egg-info/     # Packaging metadata
 ├── notebooks/               # Jupyter notebooks and experiments
 ├── src/                     # Core application modules
-│   ├── components/          # Chains, models, prompts, retrievers
-│   ├── vector_db_store/     # Vector database client wrapper
-│   ├── __init__.py
-│   └── session.py           # User session & namespace logic
+│   ├── _pycache_/           # Python cache files
+│   ├── components/          # Modular chains and retrievers
+│   │   ├── __init__.py
+│   │   ├── chains.py        # LLM chain definitions (search‐query & Q&A)
+│   │   ├── models.py        # Embedding and LLM model wrappers
+│   │   ├── prompts.py       # Prompt templates for various chains
+│   │   ├── retrievers.py    # Context & memory retrieval logic
+│   │   └── vector_store.py  # Vector DB ingestion & similarity search
+│   ├── __init__.py          # Module initializer
+│   ├── add_info.py          # Script to ingest/update external docs in KB
+│   ├── runnables.py         # For the langchain runnable pipeline
+│   ├── session.py           # Per-user session & vector namespace management
+│   └── vector_db_store/     # Vector_db persist directory
+├── .env                     # Environment variables (API keys, endpoints)
+├── .gitignore               # Files and folders to ignore in Git
 ├── app.py                   # Streamlit application entrypoint
-├── template.py              # Code templates or utilities
-├── setup.py                 # Package installation script
+├── README.md                # Project documentation
 ├── requirements.txt         # Python dependencies
-├── .env.example             # Sample environment variables
-├── .gitignore               # Files & folders to ignore
-└── README.md                # Project documentation
+├── setup.py                 # Package installation script
+└── template.py              # Utility templates and code snippets
 
 ---
 
