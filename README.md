@@ -124,12 +124,12 @@ Built entirely with Streamlit, the UI allows users to:
 
 - **Environment Variables** (`.env`):
 
-  - `OPENAI_API_KEY` – Your OpenAI key
+  - `GROQAI_API_KEY` – Your GROQ key
   - `VECTOR_DB_URL`  – Your vector database endpoint
   - `EMBEDDING_MODEL` – Embedding model identifier
   - `LLM_MODEL`      – Chat model identifier
 
-- **Settings** (`config.py`): Customize chunk size, overlap, namespaces, LLM options, etc.
+- **Settings** (`src/add_info.py`,`src/components/models.py`): Customize chunk size, overlap, namespaces, LLM options, etc.
 
 ---
 
