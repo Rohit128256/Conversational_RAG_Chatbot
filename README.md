@@ -53,7 +53,7 @@ By combining external knowledge and chat history, this tool can answer detailed 
 
 ## Demo Interface
 
-![Streamlit Interface](./assets/interface.png)
+![Streamlit Interface](./assets/Interface.png)
 
 Built entirely with Streamlit, the UI allows users to:
 
